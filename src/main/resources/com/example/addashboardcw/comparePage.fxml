@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="648.0" prefWidth="920.0" styleClass="menu" stylesheets="@../../../Style/ad.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addashboardcw.ComparePageController">
+   <items>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <GridPane fx:id="chartGrid" alignment="CENTER" gridLinesVisible="true" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="165.0" text="Compare Graph 1" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#windowGraph1" prefHeight="30.0" prefWidth="36.0" text="+" />
+                           </children>
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="box1" prefHeight="368.0" prefWidth="452.0">
+                           <children>
+                              <BarChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="391.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="165.0" text="Compare Graph 2" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#windowGraph2" prefHeight="30.0" prefWidth="36.0" text="+" />
+                           </children>
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="box2" prefHeight="368.0" prefWidth="452.0">
+                           <children>
+                              <BarChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="391.0">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="462.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="165.0" text="Compare Graph 3" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#windowGraph3" prefHeight="30.0" prefWidth="36.0" text="+" />
+                           </children>
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="box3" prefHeight="395.0" prefWidth="452.0">
+                           <children>
+                              <BarChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="391.0">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="165.0" text="Compare Graph 4" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#windowGraph4" prefHeight="30.0" prefWidth="36.0" text="+" />
+                           </children>
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="box4" prefHeight="393.0" prefWidth="452.0">
+                           <children>
+                              <BarChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="391.0">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </center>
+         <top>
+            <HBox prefHeight="56.0" prefWidth="904.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="TOP_LEFT" minHeight="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="69.0" prefWidth="245.0" styleClass="menu-button" stylesheets="@../../../Style/ad.css" text="&lt;-">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="-30.0" />
+                     </padding>
+                  </Button>
+                  <Label alignment="CENTER" prefHeight="24.0" prefWidth="403.0" text="Compare Screen" textAlignment="CENTER">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#resetClicked" prefHeight="44.0" prefWidth="98.0" text="Reset Graphs" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="120.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </items>
+</SplitPane>

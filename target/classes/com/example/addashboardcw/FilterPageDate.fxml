@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="609.0" styleClass="menu" stylesheets="@../../../Style/ad.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addashboardcw.UploadPageController">
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+   <top>
+      <Label text="Filters" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="256.0" prefWidth="609.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="609.0">
+               <children>
+                  <Label text="Date Ranges" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="609.0">
+               <children>
+                  <DatePicker promptText="Beginning Date" />
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="609.0">
+               <children>
+                  <DatePicker promptText="End Date" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" text="Apply Filter">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

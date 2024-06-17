@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.18191721132897604" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addashboardcw.UploadPageController">
+   <items>
+      <VBox alignment="CENTER" minHeight="-Infinity" prefHeight="649.0" prefWidth="136.0" styleClass="sidebar" stylesheets="@../../../Style/ad.css" SplitPane.resizableWithParent="false">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Upload" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/download.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#onGotoLineChart" prefHeight="126.0" prefWidth="156.0" style="-fx-background-color: transparent;" text="Linechart" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="119.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/linechart2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#onGotoBarChart" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Barchart" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="102.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/barchart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#onGotoHistogram" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Histogram" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="84.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/histogram.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Compare" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="99.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/502960.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="748.0" styleClass="menu" stylesheets="@../../../Style/ad.css">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="908.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#goBack" prefHeight="100.0" prefWidth="74.0" styleClass="menu-button" stylesheets="@../../../Style/ad.css" text="&lt;-">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upload CSVs" textAlignment="CENTER" wrappingWidth="686.90625">
+                     <font>
+                        <Font size="64.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="568.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="UploadIText" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload Impression Log:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#onUploadILClick" text="Open CSV..." />
+                  <Text fx:id="UploadCText" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload Click Log:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#onUploadCLClick" text="Open CSV..." />
+                  <Text fx:id="UploadSText" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload Server Log:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#onUploadSLClick" text="Open CSV..." />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <right>
+            <VBox alignment="TOP_CENTER" minWidth="-Infinity" prefHeight="422.0" prefWidth="371.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="How to Upload CSVs">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1. Select the button below the heading of the file you want to upload" wrappingWidth="350.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2. Once selected, open the file from the file explorer" wrappingWidth="350.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3. If there is an error make sure the file is in the correct format and for the correct option" wrappingWidth="350.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="100.0" />
+               </padding>
+            </VBox>
+         </right>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.15376106194690264" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="920.0" styleClass="menu" stylesheets="@../../../Style/ad.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addashboardcw.LineGraphController">
+   <items>
+      <VBox alignment="TOP_CENTER" minHeight="-Infinity" prefHeight="649.0" prefWidth="136.0" styleClass="sidebar" stylesheets="@../../../Style/ad.css">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#uploadClicked" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Upload" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/download.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="126.0" prefWidth="156.0" style="-fx-background-color: transparent;" text="Linechart" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="119.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/linechart2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#barClicked" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Barchart" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="102.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/barchart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#histoClicked" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Histogram" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="84.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/histogram.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#compareClicked" prefHeight="124.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Compare" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="99.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/502960.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Line Chart">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="375.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="55.0" prefWidth="377.0" spacing="5.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <DatePicker fx:id="startDatePicker" onAction="#onPickStartDate" prefHeight="25.0" prefWidth="135.0" promptText="Start Date" />
+                                    <DatePicker fx:id="endDatePicker" onAction="#onPickEndDate" prefHeight="25.0" prefWidth="135.0" promptText="End Date" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="55.0" prefWidth="129.0" spacing="5.0">
+                                 <children>
+                                    <ComboBox fx:id="contextBox" prefHeight="25.0" prefWidth="137.0" promptText="Choose Context" />
+                                    <ComboBox fx:id="genderBox" prefHeight="25.0" prefWidth="137.0" promptText="Choose Gender" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="55.0" prefWidth="139.0" spacing="5.0">
+                                 <children>
+                                    <ComboBox fx:id="incomeBox" prefHeight="25.0" prefWidth="137.0" promptText="Choose Income" />
+                                    <ComboBox fx:id="ageRangeBox" prefHeight="25.0" prefWidth="137.0" promptText="Age Range" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="25.0" prefWidth="369.0" spacing="275.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleApplyFilters" text="Apply" />
+                              <Button mnemonicParsing="false" onAction="#handleResetFilters" text="Reset" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="460.0">
+                           <children>
+                              <Button fx:id="zoomButton" mnemonicParsing="false" onAction="#windowGraph1" text="+">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox fx:id="graphContainer" prefHeight="377.0" prefWidth="460.0">
+                     <children>
+                        <LineChart prefWidth="460.0">
+                          <xAxis>
+                            <CategoryAxis tickLabelFill="WHITE" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="438.0" spacing="25.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleShowLineChart" text="Generate Graph" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#compareClicked" text="Add to Compare Page" textAlignment="CENTER" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="438.0" spacing="25.0">
+                     <children>
+                        <ComboBox fx:id="timeBox" prefHeight="25.0" prefWidth="114.0" promptText="Choose Time" visibleRowCount="2" />
+                        <ComboBox fx:id="bounceBox" prefHeight="25.0" prefWidth="120.0" promptText="Define Bounce" visibleRowCount="2" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <VBox prefHeight="640.0" prefWidth="245.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="TOP_LEFT" minHeight="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="69.0" prefWidth="209.0" styleClass="menu-button" stylesheets="@../../../Style/ad.css" text="&lt;-" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" top="-30.0" />
+                     </padding>
+                  </Button>
+                  <VBox alignment="CENTER_LEFT" prefHeight="564.0" prefWidth="279.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="221.0" text="Select Metrics">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <RadioButton fx:id="impressionSelect" mnemonicParsing="false" text="Number of Impressions">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Metrics" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="clicksSelect" mnemonicParsing="false" text="Number of Clicks" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="uniqueSelect" mnemonicParsing="false" text="Number of Uniques" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="bouncesSelect" mnemonicParsing="false" text="Number of Bounces" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="conversionSelect" mnemonicParsing="false" text="Number of Conversions" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="totalCostSelect" mnemonicParsing="false" text="Total Cost" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="CTRSelect" mnemonicParsing="false" text="CTR" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="CPASelect" mnemonicParsing="false" text="CPA" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="CPCSelect" mnemonicParsing="false" text="CPC" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="CPMSelect" mnemonicParsing="false" text="CPM" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="bounceRate" mnemonicParsing="false" text="Bounce Rate" toggleGroup="$Metrics">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <TextField fx:id="pagesTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#validatePagesField" prefHeight="25.0" prefWidth="147.0" promptText="Enter num bounce pages" />
+                              <Text fx:id="pageError" fill="#eb0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Error: Invalid Number">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <TextField fx:id="timeSpentTF" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#validateTimeField" prefHeight="25.0" prefWidth="147.0" promptText="Enter time spent bounce">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                              <Text fx:id="timeError" fill="#eb0000" strokeType="OUTSIDE" strokeWidth="0.0" text="Error: Invalid Number">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </items>
+</SplitPane>

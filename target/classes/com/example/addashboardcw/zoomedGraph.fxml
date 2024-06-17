@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="920.0" styleClass="menu" stylesheets="@../../../Style/ad.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addashboardcw.ZoomedGraphController">
+   <top>
+      <HBox prefHeight="83.0" prefWidth="763.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="TOP_LEFT" minHeight="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="69.0" prefWidth="392.0" styleClass="menu-button" stylesheets="@../../../Style/ad.css" text="&lt;-">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="-30.0" />
+               </padding>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Graph">
+               <font>
+                  <Font name="Gadugi" size="60.0" />
+               </font>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#screenShot" text="Screenshot">
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+   <center>
+      <VBox fx:id="container" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

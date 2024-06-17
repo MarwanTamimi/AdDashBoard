@@ -1,0 +1,144 @@
+.gamepane {
+    -fx-background-color: black;
+}
+.Bartitle{
+
+}
+.intro {
+    -fx-background-color: black;
+}
+
+.menu {
+    -fx-background-color: #e3e3e3;
+    -fx-background-size: cover;
+}
+
+.sidebar {
+    -fx-background-color: #26262c;
+}
+#exit {
+    -fx-background-color: #1b2f31;
+    -fx-background-radius: 50px;
+    -fx-alignment: center;
+    -fx-font-size: large;
+    -fx-font-weight: 600;
+    -fx-pref-height: 3em;
+    -fx-pref-width: 8em;
+    -fx-text-fill: #1cc49d;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+}
+
+#exit:hover {
+    -fx-background-color: #b20000;
+    -fx-cursor: hand;
+}
+.exit:pressed {
+    -fx-background-color: #9b0000;
+}
+
+#start {
+    -fx-background-color: #1b2f31;
+    -fx-background-radius: 50px;
+    -fx-alignment: center;
+    -fx-font-size: large;
+    -fx-font-weight: 600;
+    -fx-pref-height: 3em;
+    -fx-pref-width: 8em;
+    -fx-text-fill: #1cc49d;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+}
+
+#start:hover {
+    -fx-background-color: #565656;
+    -fx-cursor: hand;
+}
+.start:pressed {
+    -fx-background-color: #abd97f;
+}
+
+.menu-button{
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-font-family: "Comic Sans MS";
+    /*-fx-stroke: black;*/
+    -fx-text-fill: rgba(255, 255, 255, 0.68);
+    -fx-font-size: 60;
+    -fx-stroke: black;
+    -fx-effect: dropshadow(gaussian, black, 1, 1.0, 1, 1);
+}
+
+.menuItem {
+    -fx-fill: white;
+    -fx-font-family: 'Orbitron';
+    -fx-font-size: 32px;
+    -fx-border-color: black;
+    -fx-stroke: black;
+    -fx-effect: dropshadow(gaussian, black, 1, 1.0, 1, 1);
+}
+
+.menuItem:hover {
+    -fx-fill: #808080;
+}
+
+.chart-bar{
+    -fx-bar-fill: #0b3094;
+}
+
+
+
+
+
+.axis{
+    -fx-stroke: #000000;
+    -fx-fill: #000000;
+    -fx-tick-label-fill: #000000;
+}
+
+.axis-label {
+    -fx-text-fill: Black;
+}
+
+.menuItem.selected {
+    -fx-fill: yellow;
+}
+
+.bigtitle {
+    -fx-fill: white;
+    -fx-font-family: 'Orbitron';
+    -fx-font-size: 80px;
+    -fx-font-weight: 900;
+    -fx-border-color: black;
+    -fx-stroke: black;
+    -fx-effect: dropshadow(gaussian, black, 1, 1.0, 1, 1);
+}
+
+.title {
+    -fx-fill: white;
+    -fx-font-family: 'Orbitron';
+    -fx-font-size: 32px;
+    -fx-font-weight: 900;
+    -fx-border-color: black;
+    -fx-stroke: black;
+    -fx-effect: dropshadow(gaussian, black, 1, 1.0, 1, 1);
+}
+
+.heading {
+    -fx-fill: white;
+    -fx-font-family: 'Orbitron';
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-border-color: black;
+    -fx-stroke: black;
+    -fx-effect: dropshadow(gaussian, black, 1, 1.0, 1, 1);
+}
+
+.chatText{
+    -fx-fill: white;
+    -fx-font-family: 'Orbitron';
+    -fx-font-size: 12px;
+}
+
