@@ -1,6 +1,6 @@
 # Ad Auction Dashboard
 
-![Ad Auction Dashboard Compare Screen](/Users/marwanmousa/Documents/AdDashboard/Screen Shot.png)
+![Ad Auction Dashboard Compare Screen](https://github.com/MarwanTamimi/AdDashBoard/raw/main/Screen%20Shot.png)
 
 ## Description
 The Ad Auction Dashboard is designed to manage and analyze advertising data effectively. It provides a user-friendly interface for visualizing different aspects of ad campaigns, such as impressions, clicks, and server interactions. This tool is essential for advertisers looking to optimize their campaigns based on detailed analytics. For a complete outline of project features and goals, please refer to the `SEG_Ad_Auction_Dashboard_specification.pdf` included in the project files.
